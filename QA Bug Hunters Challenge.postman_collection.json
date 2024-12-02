@@ -1,0 +1,3687 @@
+{
+	"info": {
+		"_postman_id": "139adb2c-ca37-4c8a-9522-a86299bd5dd3",
+		"name": "QA Bug Hunters Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16543048",
+		"_collection_link": "https://speeding-space-190339.postman.co/workspace/CREDDY~40cbf4a8-d915-4186-b926-1f10f9da67e2/collection/16543048-139adb2c-ca37-4c8a-9522-a86299bd5dd3?action=share&source=collection_link&creator=16543048"
+	},
+	"item": [
+		{
+			"name": "Release",
+			"item": [
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Get a user",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-23",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users/{{user_uuid}}",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a user",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-1",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users/{{user_uuid}}",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a user api-24",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-24",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"NewUserEmailUpdated@gmail.com\",\r\n    \"password\": \"NewUserPasswordUpdated\",\r\n    \"name\": \"NewUserNameUpdated\",\r\n    \"nickname\": \"NewUserNicnameUpdated\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users/{{user_uuid}}",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a user api-4",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"NewUserEmailUpdated@gmail.com\",\r\n    \"password\": \"NewUserPasswordUpdated\",\r\n    \"name\": \"NewUserNameUpdated\",\r\n    \"nickname\": \"NewUserNicnameUpdated\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users/{{user_uuid}}",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get a user by email and password",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-7",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"NewUserEmail@gmail.com\",\r\n  \"password\": \"NewUserPassword\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users/login",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new user api-22",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// сохраняем uuid из json ответа в переменную окружения\r",
+											"pm.environment.set(\"user_uuid\", pm.response.json().uuid);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-22",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"NewUserEmail@gmail.com\",\r\n  \"password\": \"NewUserPassword\",\r\n  \"name\": \"NewUserName\",\r\n  \"nickname\": \"NewUserNicname\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new user api-3",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// сохраняем uuid из json ответа в переменную окружения\r",
+											"pm.environment.set(\"user_uuid\", pm.response.json().uuid);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-3",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"NewUserEmail@gmail.com\",\r\n  \"password\": \"NewUserPassword\",\r\n  \"name\": \"NewUserName\",\r\n  \"nickname\": \"NewUserNicname\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List all users api-21",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-21",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url_release}}/users",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List all users api-6",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-6",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url_release}}/users",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Wishlist",
+					"item": [
+						{
+							"name": "Add an item to users wishlist api-5",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-5",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"item_uuid\": \"{{item_uuid_1}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users/{{user_uuid}}/wishlist/add",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"wishlist",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add an item to users wishlist api-25",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-25",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"item_uuid\": \"{{item_uuid_1}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users/{{user_uuid}}/wishlist/add",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"wishlist",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove an item to users wishlist",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"item_uuid\": \"{{item_uuid_1}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users/{{user_uuid}}/wishlist/remove",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"wishlist",
+										"remove"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get a wishlist",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users/{{user_uuid}}/wishlist",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"wishlist"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Games",
+					"item": [
+						{
+							"name": "Get a game",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-9",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/games/{{game_uuid_1}}",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"games",
+										"{{game_uuid_1}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search games",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-2",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/games/{{game_uuid_1}}",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"games",
+										"{{game_uuid_1}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List all games",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-2",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/games",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"games"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Categories",
+					"item": [
+						{
+							"name": "List all categories",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-10",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/categories",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get games by category",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-10",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/categories/78fcb98b-d820-4d79-a049-e2089b7ce87a/games",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"categories",
+										"78fcb98b-d820-4d79-a049-e2089b7ce87a",
+										"games"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Avatars",
+					"item": [
+						{
+							"name": "Update users avatar",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-11",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "avatar_file",
+											"type": "file",
+											"src": "/C:/Users/megam/Desktop/ФОТО/коты/Daniel-Patrick-Kessler-Bunny-Canvas-Art-0b398033-96dc-468a-9b39-27cb9695036e.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url_release}}/users/{{user_uuid}}/avatar",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"avatar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cart",
+					"item": [
+						{
+							"name": "Get a cart",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-12",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users/{{user_uuid}}/cart",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"cart"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add an item to users cart",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-12",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"item_uuid\": \"{{item_uuid_1}}\",\r\n  \"quantity\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users/{{user_uuid}}/cart/add",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"cart",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Change an item in users cart",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-13",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"item_uuid\": \"{{item_uuid_1}}\",\r\n  \"quantity\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users/{{user_uuid}}/cart/change",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"cart",
+										"change"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Clear users cart",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-15",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users/{{user_uuid}}/cart/clear",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"cart",
+										"clear"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove an item from users cart",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-14",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"item_uuid\": \"{{item_uuid_1}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users/{{user_uuid}}/cart/remove",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"cart",
+										"remove"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Orders",
+					"item": [
+						{
+							"name": "List all orders for a user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-17",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users/{{user_uuid}}/orders",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new order",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// сохраняем uuid из json ответа в переменную окружения\r",
+											"pm.environment.set(\"order_uuid\", pm.response.json().uuid);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-16",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"item_uuid\": \"06520f6e-5096-4d49-a044-136357737eff\",\r\n      \"quantity\": 1\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users/{{user_uuid}}/orders",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update an order status_canceled",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-18",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"status\": \"canceled\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/orders/{{order_uuid}}/status",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"orders",
+										"{{order_uuid}}",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get en order",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-18",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/orders/{{order_uuid}}",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"orders",
+										"{{order_uuid}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete an order",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-18",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/orders/{{order_uuid}}",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"orders",
+										"{{order_uuid}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Payments",
+					"item": [
+						{
+							"name": "List all payments for user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-20",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users/{{user_uuid}}payments",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}payments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new payment",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// сохраняем uuid из json ответа в переменную окружения\r",
+											"pm.environment.set(\"payment_uuid\", pm.response.json().uuid);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-20",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"order_uuid\": \"{{order_uuid}}\",\r\n  \"payment_method\": \"card\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/users/{{user_uuid}}/payments",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"payments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get a payment",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-19",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/payments/{{payment_uuid}}",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"payments",
+										"{{payment_uuid}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a payment",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-19",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_release}}/payments/{{payment_uuid}}",
+									"host": [
+										"{{url_release}}"
+									],
+									"path": [
+										"payments",
+										"{{payment_uuid}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "qahack2024:megameka2@gmail.com",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Dev",
+			"item": [
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Get a user",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-23",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users/{{user_uuid}}",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a user",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-1",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users/{{user_uuid}}",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a user api-24",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-24",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"NewUserEmailUpdated@gmail.com\",\r\n    \"password\": \"NewUserPasswordUpdated\",\r\n    \"name\": \"NewUserNameUpdated\",\r\n    \"nickname\": \"NewUserNicnameUpdated\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users/{{user_uuid}}",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a user api-4",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"NewUserEmailUpdated@gmail.com\",\r\n    \"password\": \"NewUserPasswordUpdated\",\r\n    \"name\": \"NewUserNameUpdated\",\r\n    \"nickname\": \"NewUserNicnameUpdated\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users/{{user_uuid}}",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get a user by email and password",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-7",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"NewUserEmail@gmail.com\",\r\n  \"password\": \"NewUserPassword\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users/login",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new user api-22",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// сохраняем uuid из json ответа в переменную окружения\r",
+											"pm.environment.set(\"user_uuid\", pm.response.json().uuid);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-22",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"NewUserEmail@gmail.com\",\r\n  \"password\": \"NewUserPassword\",\r\n  \"name\": \"NewUserName\",\r\n  \"nickname\": \"NewUserNicname\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new user api-3",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// сохраняем uuid из json ответа в переменную окружения\r",
+											"pm.environment.set(\"user_uuid\", pm.response.json().uuid);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-3",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"NewUserEmail@gmail.com\",\r\n  \"password\": \"NewUserPassword\",\r\n  \"name\": \"NewUserName\",\r\n  \"nickname\": \"NewUserNicname\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List all users api-21",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-21",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url_dev}}/users",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List all users api-6",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-6",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url_dev}}/users",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Wishlist",
+					"item": [
+						{
+							"name": "Add an item to users wishlist api-5",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-5",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"item_uuid\": \"{{item_uuid_1}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users/{{user_uuid}}/wishlist/add",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"wishlist",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add an item to users wishlist api-25",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-25",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"item_uuid\": \"{{item_uuid_1}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users/{{user_uuid}}/wishlist/add",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"wishlist",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove an item to users wishlist",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"item_uuid\": \"{{item_uuid_1}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users/{{user_uuid}}/wishlist/remove",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"wishlist",
+										"remove"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get a wishlist",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users/{{user_uuid}}/wishlist",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"wishlist"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Games",
+					"item": [
+						{
+							"name": "Get a game",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-9",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/games/{{game_uuid_1}}",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"games",
+										"{{game_uuid_1}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search games",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-2",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/games/search?query=Wild&offset=0&limit=10",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"games",
+										"search"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "Wild"
+										},
+										{
+											"key": "offset",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List all games",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-2",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/games",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"games"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Categories",
+					"item": [
+						{
+							"name": "List all categories",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-10",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/categories",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get games by category",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-10",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/categories/78fcb98b-d820-4d79-a049-e2089b7ce87a/games",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"categories",
+										"78fcb98b-d820-4d79-a049-e2089b7ce87a",
+										"games"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Avatars",
+					"item": [
+						{
+							"name": "Update users avatar",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-11",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "avatar_file",
+											"type": "file",
+											"src": "/C:/Users/megam/Desktop/ФОТО/коты/Daniel-Patrick-Kessler-Bunny-Canvas-Art-0b398033-96dc-468a-9b39-27cb9695036e.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url_dev}}/users/{{user_uuid}}/avatar",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"avatar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cart",
+					"item": [
+						{
+							"name": "Get a cart",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-12",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users/{{user_uuid}}/cart",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"cart"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add an item to users cart",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-12",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"item_uuid\": \"{{item_uuid_1}}\",\r\n  \"quantity\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users/{{user_uuid}}/cart/add",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"cart",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Change an item in users cart",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-13",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"item_uuid\": \"{{item_uuid_1}}\",\r\n  \"quantity\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users/{{user_uuid}}/cart/change",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"cart",
+										"change"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Clear users cart",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-15",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users/{{user_uuid}}/cart/clear",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"cart",
+										"clear"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove an item from users cart",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-14",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"item_uuid\": \"{{item_uuid_1}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users/{{user_uuid}}/cart/remove",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"cart",
+										"remove"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Orders",
+					"item": [
+						{
+							"name": "List all orders for a user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-17",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users/{{user_uuid}}/orders",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new order",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// сохраняем uuid из json ответа в переменную окружения\r",
+											"pm.environment.set(\"order_uuid\", pm.response.json().uuid);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-16",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"item_uuid\": \"06520f6e-5096-4d49-a044-136357737eff\",\r\n      \"quantity\": 1\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users/{{user_uuid}}/orders",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update an order status_canceled",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-18",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"status\": \"canceled\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/orders/{{order_uuid}}/status",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"orders",
+										"{{order_uuid}}",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get an order",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-18",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/orders/{{order_uuid}}",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"orders",
+										"{{order_uuid}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete an order",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-18",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/orders/{{order_uuid}}",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"orders",
+										"{{order_uuid}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Payments",
+					"item": [
+						{
+							"name": "List all payments for user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-20",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users/{{user_uuid}}payments",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}payments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new payment",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// сохраняем uuid из json ответа в переменную окружения\r",
+											"pm.environment.set(\"payment_uuid\", pm.response.json().uuid);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-20",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"order_uuid\": \"{{order_uuid}}\",\r\n  \"payment_method\": \"card\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/users/{{user_uuid}}/payments",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"users",
+										"{{user_uuid}}",
+										"payments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get a payment",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-19",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/payments/{{payment_uuid}}",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"payments",
+										"{{payment_uuid}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a payment",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qahack2024:megameka2@gmail.com",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Task-Id",
+										"value": "api-19",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_dev}}/payments/{{payment_uuid}}",
+									"host": [
+										"{{url_dev}}"
+									],
+									"path": [
+										"payments",
+										"{{payment_uuid}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
